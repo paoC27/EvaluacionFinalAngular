@@ -1,0 +1,85 @@
+.contenedor {
+    width: 350px;
+    margin: 20px auto;
+  }
+  
+  .titulo {
+    text-align: center;
+  }
+  
+  .formulario-tareas {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .campo-texto {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .mensaje-error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .boton-enviar {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .boton-enviar:hover {
+    background-color: #0056b3;
+  }
+  
+  .mensaje-no-tareas {
+    text-align: center;
+    color: #888;
+  }
+  
+  .lista-tareas {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .elemento-tarea {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .acciones-tarea button {
+    margin-left: 10px;
+  }
+  
+  .boton-editar {
+    background-color: #12e912;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .boton-eliminar {
+    background-color: #dc3545;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .boton-editar:hover, .boton-eliminar:hover {
+    opacity: 0.8;
+  }
+  

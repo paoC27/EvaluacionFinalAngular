@@ -1,0 +1,32 @@
+<div class="contenedor">
+    <h1 class="titulo">Lista de Tareas</h1>
+  
+    <!-- formulario para agregar o editar una tarea -->
+    <form [formGroup]="tareasForm" (ngSubmit)="onSubmit()" class="formulario-tareas">
+      <input class="campo-texto" type="text" formControlName="tarea" placeholder="Escribe una tarea">
+  
+      <!--mensaje de error si el campo esta vacío -->
+      <div *ngIf="tareasForm.controls['tarea'].invalid && tareasForm.controls['tarea'].touched" class="mensaje-error">
+        <p>El campo tarea no puede estar vacío.</p>
+      </div>
+  
+      <button class="boton-enviar" type="submit">
+        {{ editMode ? 'Actualizar' : 'Agregar' }} Tarea
+      </button>
+    </form>
+  
+    <div *ngIf="tareas.length === 0" class="mensaje-no-tareas">
+      <p>No hay tareas.</p>
+    </div>
+  
+    <ul class="lista-tareas">
+      <li *ngFor="let tarea of tareas; let i = index" class="elemento-tarea">
+        <span>{{ tarea }}</span>
+        <div class="acciones-tarea">
+          <button class="boton-editar" (click)="onEdit(i)">Editar</button>
+          <button class="boton-eliminar" (click)="onDelete(i)">Eliminar</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
